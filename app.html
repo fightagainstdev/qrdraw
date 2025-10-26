@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <title>空中绘画</title>
+  <link rel="stylesheet" href="app.css">
+</head>
+<body>
+  <canvas id="drawCanvas"></canvas>
+  <canvas id="landmarkCanvas"></canvas>
+  <video id="webcam" autoplay playsinline muted></video>
+  <div id="mode_now">手势: -</div>
+  <img id="pencil" src="pencil.png" alt="Pencil Cursor" />
+  <img id="eraser" src="rubber.png" alt="Eraser Cursor" style="display: none;" />
+  <div id="colorContainer">
+    <div id="colorBar"></div>
+    <div id="colorCursor"></div>
+  </div>
+  <div id="currentColor"></div>
+  <div id="colorLabel">当前颜色</div>
+  <button id="startCamera" style="display:none; position:fixed; top:50%; left:50%; transform:translate(-50%, -50%); z-index:10;">启动摄像头</button>
+
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
